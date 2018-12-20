@@ -98,7 +98,7 @@ public class PrivatFragment extends BankFragment<PrivatePresenter> implements Pr
                 saleRatePefTextView.setText(String.format(FLOAT_FORMAT,exchangeRate.getPurchaseRate()));
                 saleRateTextView.setText(String.format(FLOAT_FORMAT,exchangeRate.getSaleRate()));
                 currencyTextView.setText(exchangeRate.getCurrency());
-                root.setBackground(new ColorDrawable(getContext().getResources().getColor(android.R.color.white)));
+                root.setBackground(new ColorDrawable(getResources().getColor(R.color.default_background)));
             }
 
             @OnClick(R.id.layout_private_item_root)

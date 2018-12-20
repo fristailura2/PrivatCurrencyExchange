@@ -1,7 +1,5 @@
 package com.fastsoft.testcurrencyexchange;
 
-import android.app.Application;
-
 import com.fastsoft.testcurrencyexchange.di.DaggerApplicationComponent;
 
 import dagger.android.AndroidInjector;

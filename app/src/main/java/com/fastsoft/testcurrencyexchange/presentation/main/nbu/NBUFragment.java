@@ -1,6 +1,6 @@
 package com.fastsoft.testcurrencyexchange.presentation.main.nbu;
 
-import android.graphics.Color;
+import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
@@ -86,10 +86,11 @@ public class NBUFragment extends BankFragment<NBUPresenter> implements NBUView,B
 
             @Override
             public void bindPrivate(ExchangeRateSave exchangeRate, int index) {
+                Resources resources=getResources();
                 if(index%2==0)
-                    root.setBackground(new ColorDrawable(getContext().getResources().getColor(R.color.colorPrimary)));
+                    root.setBackground(new ColorDrawable(resources.getColor(R.color.colorPrimary)));
                 else
-                    root.setBackground(new ColorDrawable(Color.WHITE));
+                    root.setBackground(new ColorDrawable(resources.getColor(R.color.default_background)));
 
                 double baseCurrencyVal=exchangeRate.getPurchaseRateNB();
                 double otherCurrencyVal=1d;

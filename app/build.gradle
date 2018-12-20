@@ -23,8 +23,12 @@ android {
     }
     buildTypes {
         release {
+            buildConfigField "String", "PRIVATE_API_BASE_URL", '"'+project.findProperty('privat_server.api_url')+'"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "PRIVATE_API_BASE_URL", '"'+project.findProperty('privat_server.api_url')+'"'
         }
     }
     compileOptions {
@@ -32,6 +36,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
 
 def room_version = "1.1.1"
 def support_version = "28.0.0"

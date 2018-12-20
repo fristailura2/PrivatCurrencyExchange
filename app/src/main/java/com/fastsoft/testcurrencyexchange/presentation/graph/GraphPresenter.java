@@ -81,6 +81,7 @@ public class GraphPresenter extends BasePresenter<GraphView> {
         }
     }
 
+
     public void progressDialogCanceled() {
         dateObservableDisposable.dispose();
         dateObservableDisposable =null;

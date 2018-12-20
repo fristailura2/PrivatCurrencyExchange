@@ -1,5 +1,7 @@
 package com.fastsoft.testcurrencyexchange.data.exchange.api;
 
+import com.fastsoft.testcurrencyexchange.BuildConfig;
+
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Singleton;
@@ -14,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class ApiModule {
-    private static final String PRIVATE_API_BASE_URL="https://api.privatbank.ua/";
+    private static final String PRIVATE_API_BASE_URL=BuildConfig.PRIVATE_API_BASE_URL;
     private static final int TIMEOUT=35000;
     @Singleton
     @Provides

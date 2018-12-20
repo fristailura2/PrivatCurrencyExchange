@@ -13,7 +13,7 @@ import dagger.Provides;
 public class AppContextModule {
     @Provides
     @Singleton
-    public Context provideAppConext(App app){
+    public Context provideAppContext(App app){
         return app.getApplicationContext();
     }
 }
